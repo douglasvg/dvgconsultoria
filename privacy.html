@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — DVG Consultoria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+            background: #000000;
+            min-height: 100vh;
+        }
+        
+        .privacy-content {
+            background: linear-gradient(145deg, #1a1a1a 0%, #222222 100%);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .privacy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .privacy-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ff6b35;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-content p {
+            color: #e6e6e6;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-content a {
+            color: #ff6b35;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .privacy-content a:hover {
+            color: #ff8c42;
+        }
+        
+        .privacy-content strong {
+            color: #ffffff;
+        }
+        
+        .privacy-footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .privacy-footer small {
+            color: #b3b3b3;
+            font-size: 0.9rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ff6b35;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #ff8c42;
+            transform: translateX(-4px);
+        }
+        
+        .back-link::before {
+            content: '←';
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-container">
+        <a href="index.html" class="back-link">Voltar ao site</a>
+        
+        <div class="privacy-content">
+            <h1 class="privacy-title">Política de Privacidade</h1>
+            
+            <p>A <strong>DVG Consultoria e Gestão Empresarial LTDA</strong>, inscrita no CNPJ sob nº <strong>57.438.845/0001-80</strong>, respeita a sua privacidade e está comprometida em proteger os dados pessoais de nossos clientes e visitantes.</p>
+
+            <h2>1. Dados que coletamos</h2>
+            <p>Podemos coletar informações como nome, e-mail, telefone e dados fornecidos voluntariamente em formulários de contato.</p>
+
+            <h2>2. Finalidade</h2>
+            <p>Os dados são utilizados para comunicação, prestação de serviços, envio de informações relevantes e cumprimento de obrigações legais.</p>
+
+            <h2>3. Compartilhamento</h2>
+            <p>Não compartilhamos seus dados pessoais, exceto quando necessário para cumprimento legal ou mediante consentimento expresso.</p>
+
+            <h2>4. Segurança</h2>
+            <p>Adotamos medidas técnicas e organizacionais para proteger suas informações contra acessos não autorizados.</p>
+
+            <h2>5. Contato</h2>
+            <p>Em caso de dúvidas, entre em contato pelo e-mail: <a href="mailto:douglas@dvgconsultoria.com.br">douglas@dvgconsultoria.com.br</a></p>
+
+            <div class="privacy-footer">
+                <small>© <span id="y"></span> DVG Consultoria e Gestão Empresarial LTDA · CNPJ 57.438.845/0001-80</small>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

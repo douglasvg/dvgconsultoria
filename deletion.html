@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Exclusão de Dados — DVG Consultoria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .deletion-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+            background: #000000;
+            min-height: 100vh;
+        }
+        
+        .deletion-content {
+            background: linear-gradient(145deg, #1a1a1a 0%, #222222 100%);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .deletion-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .deletion-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ff6b35;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .deletion-content p {
+            color: #e6e6e6;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .deletion-content a {
+            color: #ff6b35;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .deletion-content a:hover {
+            color: #ff8c42;
+        }
+        
+        .deletion-content strong {
+            color: #ffffff;
+        }
+        
+        .deletion-footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .deletion-footer small {
+            color: #b3b3b3;
+            font-size: 0.9rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ff6b35;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #ff8c42;
+            transform: translateX(-4px);
+        }
+        
+        .back-link::before {
+            content: '←';
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="deletion-container">
+        <a href="index.html" class="back-link">Voltar ao site</a>
+        
+        <div class="deletion-content">
+            <h1 class="deletion-title">Política de Exclusão de Dados</h1>
+            
+            <p>A <strong>DVG Consultoria e Gestão Empresarial LTDA</strong> (CNPJ: 57.438.845/0001-80) garante ao usuário o direito de solicitar a exclusão dos seus dados pessoais.</p>
+
+            <h2>1. Como solicitar</h2>
+            <p>Basta enviar um e-mail para <a href="mailto:douglas@dvgconsultoria.com.br">douglas@dvgconsultoria.com.br</a> solicitando a exclusão.</p>
+
+            <h2>2. Prazo</h2>
+            <p>As solicitações serão atendidas em até 30 dias corridos, salvo quando a lei exigir a retenção por período maior.</p>
+
+            <h2>3. Exceções</h2>
+            <p>Determinadas informações poderão ser mantidas quando necessárias para cumprimento de obrigação legal ou defesa em processos.</p>
+
+            <div class="deletion-footer">
+                <small>© <span id="y"></span> DVG Consultoria e Gestão Empresarial LTDA · CNPJ 57.438.845/0001-80</small>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
