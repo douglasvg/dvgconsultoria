@@ -79,18 +79,30 @@ skillBars.forEach(bar => {
     skillObserver.observe(bar);
 });
 
-// Form submission
-const contactForm = document.querySelector('.form');
+// EmailJS Configuration
+(function() {
+    emailjs.init("vZ_oWuzEe0GIhKnuE"); // Replace with your EmailJS public key
+})();
+
+// Form submission with EmailJS
+const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = contactForm.querySelector('textarea').value;
+        const name = formData.get('user_name');
+        const email = formData.get('user_email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+        const website = formData.get('website'); // Honeypot field
+        
+        // Check honeypot (if filled, it's likely a bot)
+        if (website) {
+            console.log('Bot detected via honeypot');
+            return; // Silently reject
+        }
         
         // Simple validation
         if (!name || !email || !subject || !message) {
@@ -105,18 +117,26 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
+        // Update button state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
         
-        setTimeout(() => {
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            contactForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        // Send email using EmailJS
+        emailjs.sendForm('service_a5kandn', 'template_6c59gav', contactForm)
+            .then(() => {
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                alert('Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente por email.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
     });
 }
 
